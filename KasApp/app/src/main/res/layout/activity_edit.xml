@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".EditActivity"
+    android:background="#D6CEE2">
+
+    <!-- Status Selection Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:padding="8dp"
+        android:layout_margin="15dp">
+
+        <RadioGroup
+            android:id="@+id/radioStatus"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/radioMasuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MASUK"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/radioKeluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KELUAR"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Input Fields Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:padding="8dp"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtJumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Rp."
+                android:inputType="number"
+                android:padding="10dp"
+                android:backgroundTint="#BDBDBD"
+                android:textSize="16sp"
+                tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edtKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:hint="Keterangan"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:backgroundTint="#BDBDBD"
+                android:maxLines="5"
+                android:minLines="3"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/edtTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="tanggal"
+                android:padding="10dp"
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnUbah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#813C8C"
+        android:text="UBAH"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingVertical="10dp"
+        tools:ignore="HardcodedText"
+        android:layout_margin="15dp"/>
+
+</LinearLayout>
